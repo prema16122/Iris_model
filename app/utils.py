@@ -3,16 +3,17 @@ import pickle
 import numpy as np
 import os
 from flask import render_template,request
+import CONFIG
 
 class Prediction():
     def __init__(self):  
         print(os.getcwd())
 
     def load_raw(self):
-        with open(r'C:\1st october 2022\Python regular class\March 2023\project making by me\Iris_model\app\logistic_model.pkl','rb') as model_file: 
+        with open(CONFIG.MODEL_PATH,'rb') as model_file: 
             self.model = pickle.load(model_file)
         
-        with open(r'C:\1st october 2022\Python regular class\March 2023\project making by me\Iris_model\app\columns_names.json','r') as col_file: 
+        with open(CONFIG.ASSET_PATH,'r') as col_file: 
             self.column_names = json.load(col_file)
 
 

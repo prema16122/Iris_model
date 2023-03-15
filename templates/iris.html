@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <style>
+            h1 {color:rgb(52, 14, 14);}
+            h2 {color:#54f42c;}
+          </style>
+
+    </head>
+    <body text="blue" bgcolor="grey">
+        <h1>Iris Species Classification</h1>
+
+        <form action ="/predict" method="post">
+            <label>sepal length cm:</label><input type ="number" step= "any" name ="html_sl"><br><br>
+            <label>sepal width cm:</label><input type ="number" step= "any" name ="html_sw"><br><br>
+            <label>petal length cm:</label><input type ="number" step= "any" name ="html_pl"><br><br>
+            <label>petal width cm:</label><input type ="number" step= "any" name ="html_pw"><br><br>
+            <input type ="submit" value ="Check">
+            <h2>{{PREDICT_VALUE}}</h2>  
+      
+            </form>
+    </body>
+
+
+</html>
